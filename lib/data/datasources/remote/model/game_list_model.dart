@@ -10,8 +10,8 @@ String currentWeatherModelToJson(GameListModel data) =>
 
 class GameListModel {
   late int count;
-  late String next;
-  late String previous;
+  late String? next;
+  late String? previous;
   late List<Results> results;
 
   GameListModel({
@@ -49,8 +49,8 @@ class Results {
   late int id;
   late String name;
   late String released;
-  late String backgroundImage;
-  late double rating;
+  late String? backgroundImage;
+  late double? rating;
   late List<Platform> platforms;
   late List<Genres> genres;
   late List<Tags> tags;
@@ -120,8 +120,8 @@ class Results {
 }
 
 class Platform {
-  final int id;
-  final String name;
+  final int? id;
+  final String? name;
 
   Platform({
     required this.id,
@@ -142,8 +142,8 @@ class Platform {
 }
 
 class Genres {
-  final int id;
-  final String name;
+  final int? id;
+  final String? name;
 
   Genres({
     required this.id,
@@ -164,8 +164,8 @@ class Genres {
 }
 
 class Tags {
-  final int id;
-  final String name;
+  final int? id;
+  final String? name;
 
   Tags({
     required this.id,
