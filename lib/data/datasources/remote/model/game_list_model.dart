@@ -1,6 +1,13 @@
 import 'dart:convert';
 import 'dart:core';
 
+
+GameListModel currentWeatherModelFromJson(String str) =>
+    GameListModel.fromJson(json.decode(str));
+
+String currentWeatherModelToJson(GameListModel data) =>
+    json.encode(data.toJson());
+
 class GameListModel {
   late int count;
   late String next;
